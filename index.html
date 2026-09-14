@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>अपनी कहानियाँ</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo">📖 अपनी कहानियाँ</div>
+  <nav>
+    <a href="#home">होम</a>
+    <a href="#stories">कहानियाँ</a>
+    <a href="#write">अपनी कहानी लिखें</a>
+  </nav>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div>
+    <p class="tag">हर कहानी में एक एहसास</p>
+    <h1>अपनी कहानी, अपने शब्दों में।</h1>
+    <p>प्रेम, परिवार, प्रेरणा और जिंदगी से जुड़ी दिल छू लेने वाली कहानियाँ पढ़ें और अपनी कहानी दुनिया के साथ साझा करें।</p>
+    <a class="btn" href="#stories">कहानियाँ पढ़ें</a>
+  </div>
+</section>
+
+<section id="stories" class="section">
+  <h2>🌸 लोकप्रिय कहानियाँ</h2>
+  <input id="search" class="search" placeholder="कहानी खोजें..." oninput="filterStories()">
+  <div id="storyGrid" class="grid"></div>
+</section>
+
+<section id="write" class="section write">
+  <h2>✍️ अपनी कहानी लिखें</h2>
+  <input id="title" placeholder="कहानी का नाम">
+  <input id="author" placeholder="लेखक का नाम">
+  <select id="category">
+    <option>प्रेरणादायक</option><option>प्रेम</option><option>परिवार</option><option>भावनात्मक</option><option>डरावनी</option>
+  </select>
+  <textarea id="content" rows="8" placeholder="अपनी कहानी यहाँ लिखें..."></textarea>
+  <button class="btn" onclick="addStory()">कहानी प्रकाशित करें</button>
+  <p id="msg"></p>
+</section>
+</main>
+
+<footer>© 2026 अपनी कहानियाँ · दिल से लिखें, दिल से पढ़ें ❤️</footer>
+<script src="script.js"></script>
+</body>
+</html>
