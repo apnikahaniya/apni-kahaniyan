@@ -75,20 +75,13 @@ function render(list = stories) {
       </button>
     </article>
   `).join("");
-}
-
-function readStory(index) {
+  function readStory(index) {
   const story = stories[index];
-
-  alert(
-    "📖 " + story.title +
-    "\n\nलेखक: " + story.author +
-    "\nश्रेणी: " + story.cat +
-    "\n\n" + story.text
-  );
-}
-
-function filterStories() {
+  localStorage.setItem("selectedStory", 
+  JSON.stringify(story));
+  window.location.href = "story.html";
+  }
+}function filterStories() {
   const q = document.getElementById("search").value.toLowerCase();
 
   render(stories.filter(s =>
