@@ -17,16 +17,28 @@ function render(list = stories) {
   const grid = document.getElementById("storyGrid");
   if (!grid) return;
 
-  grid.innerHTML = list.map(s => `
+  grid.innerHTML = list.map((s, i) => `
     <article class="card">
       <div class="meta">${s.cat} · ${s.author}</div>
       <h3>${s.title}</h3>
-      <p>${s.text}</p>
-      <span class="read" onclick="alert(${JSON.stringify(s.text)})">
+      <p>${s.text.substring(0, 120)}...</p>
+
+      <button class="btn" onclick="readStory(${i})">
         पूरी कहानी पढ़ें →
-      </span>
+      </button>
     </article>
   `).join("");
+}
+
+function readStory(index) {
+  const story = stories[index];
+
+  alert(
+    "📖 " + story.title +
+    "\n\nलेखक: " + story.author +
+    "\nश्रेणी: " + story.cat +
+    "\n\n" + story.text
+  );
 }
 
 function filterStories() {
@@ -67,7 +79,5 @@ function addStory() {
   document.getElementById("author").value = "";
   document.getElementById("content").value = "";
 }
-
-
 
 render();
