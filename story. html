@@ -4,138 +4,210 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>पूरी कहानी - अपनी कहानियाँ</title>
+  <title>कहानी पढ़ें - अपनी कहानियाँ</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #fff8f2;
+      font-family: Arial, "Noto Sans Devanagari", sans-serif;
+      background: #f7f3ed;
       color: #333;
-      line-height: 1.9;
     }
 
     header {
-      background: #8e44ad;
+      background: #8b4513;
       color: white;
-      padding: 25px 15px;
+      padding: 18px 15px;
       text-align: center;
     }
 
     header h1 {
       margin: 0;
+      font-size: 28px;
     }
 
-    .story {
-      max-width: 800px;
+    .story-container {
+      max-width: 850px;
       margin: 30px auto;
       padding: 25px;
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
     }
 
-    .story h2 {
-      color: #8e44ad;
-      font-size: 30px;
+    .story-box {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.10);
+    }
+
+    .story-title {
+      margin-top: 0;
+      color: #8b4513;
+      font-size: 32px;
+      line-height: 1.4;
     }
 
     .meta {
       color: #777;
-      margin-bottom: 20px;
+      font-size: 15px;
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #ddd;
     }
 
-    .back {
+    .story-text {
+      font-size: 19px;
+      line-height: 2;
+      white-space: normal;
+    }
+
+    .back-button {
       display: inline-block;
-      margin-top: 20px;
-      padding: 10px 18px;
-      background: #8e44ad;
+      margin-top: 25px;
+      padding: 12px 20px;
+      background: #8b4513;
       color: white;
       text-decoration: none;
-      border-radius: 8px;
+      border-radius: 7px;
+    }
+
+    .back-button:hover {
+      background: #6f350f;
+    }
+
+    .not-found {
+      text-align: center;
+      padding: 30px;
     }
 
     footer {
       text-align: center;
       padding: 20px;
+      color: #777;
       margin-top: 30px;
-      background: #f1e5f7;
+    }
+
+    @media (max-width: 600px) {
+      .story-container {
+        margin: 15px auto;
+        padding: 12px;
+      }
+
+      .story-box {
+        padding: 20px;
+      }
+
+      .story-title {
+        font-size: 25px;
+      }
+
+      .story-text {
+        font-size: 17px;
+        line-height: 1.9;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <h1>📖 अपनी कहानियाँ</h1>
-  <p>दिल से लिखें, दिल से पढ़ें ❤️</p>
-</header>
+  <header>
+    <h1>📖 अपनी कहानियाँ</h1>
+  </header>
 
-<main class="story">
+  <main class="story-container">
 
-  <h2>माँ की आखिरी चिट्ठी</h2>
+    <div class="story-box" id="storyContent">
+      <div class="not-found">
+        <h2>कहानी लोड हो रही है...</h2>
+      </div>
+    </div>
 
-  <div class="meta">
-    ✍️ लेखक: अपनी कहानियाँ · भावनात्मक
-  </div>
+    <a class="back-button" href="index.html">
+      ← वापस कहानियों पर जाएँ
+    </a>
 
-  <p>
-    एक छोटे से गाँव में एक माँ अपने बेटे के साथ रहती थी।
-    बेटा पढ़ाई में बहुत अच्छा था और उसका सपना था कि वह
-    शहर जाकर पढ़ाई करे और एक दिन बड़ा आदमी बने।
-  </p>
+  </main>
 
-  <p>
-    समय के साथ बेटा शहर चला गया। पढ़ाई पूरी हुई और उसे
-    एक अच्छी नौकरी भी मिल गई। धीरे-धीरे काम बढ़ता गया
-    और वह अपने गाँव तथा अपनी माँ से दूर होता गया।
-  </p>
+  <footer>
+    © 2026 अपनी कहानियाँ
+  </footer>
 
-  <p>
-    माँ हर दिन बेटे के फोन का इंतजार करती थी। वह कहती,
-    “बेटा, जब भी समय मिले घर आ जाना।” लेकिन बेटे के पास
-    हमेशा कोई न कोई बहाना होता।
-  </p>
 
-  <p>
-    एक दिन बेटे को घर की पुरानी अलमारी में माँ की एक
-    चिट्ठी मिली। चिट्ठी में लिखा था—
-    “बेटा, मुझे तुमसे कुछ नहीं चाहिए। बस एक बार घर आकर
-    मेरे पास बैठ जाना। तुम्हारे साथ बिताया हुआ समय ही
-    मेरे लिए सबसे बड़ी खुशी है।”
-  </p>
+  <script>
+    const data = localStorage.getItem("selectedStory");
 
-  <p>
-    चिट्ठी पढ़ते ही बेटे की आँखों में आँसू आ गए। उसे
-    एहसास हुआ कि पैसे और काम के पीछे भागते-भागते उसने
-    अपनी माँ के साथ बिताने वाला सबसे कीमती समय खो दिया।
-  </p>
+    const storyContent = document.getElementById("storyContent");
 
-  <p>
-    उसने उसी दिन घर जाने का फैसला किया। जब वह घर पहुँचा,
-    तो माँ दरवाजे पर उसका इंतजार कर रही थी। बेटे ने माँ
-    को गले लगाया और कहा—“माँ, अब मैं आपको कभी अकेला
-    नहीं छोड़ूँगा।”
-  </p>
+    if (data) {
 
-  <p>
-    माँ मुस्कुराई। उसकी आँखों में आँसू थे, लेकिन उन आँसुओं
-    में शिकायत नहीं, केवल अपने बेटे के लौट आने की खुशी थी।
-  </p>
+      try {
 
-  <p>
-    <strong>सीख:</strong> जिंदगी में सफलता जरूरी है, लेकिन
-    अपने रिश्तों और अपनों के लिए समय निकालना उससे भी ज्यादा
-    जरूरी है।
-  </p>
+        const story = JSON.parse(data);
 
-  <a class="back" href="index.html">← वापस कहानियों पर जाएँ</a>
+        const title = escapeHtml(story.title || "बिना शीर्षक");
+        const author = escapeHtml(story.author || "अज्ञात लेखक");
+        const category = escapeHtml(story.cat || "सामान्य");
+        const text = escapeHtml(story.text || "कहानी उपलब्ध नहीं है।");
 
-</main>
+        storyContent.innerHTML = `
+          <h2 class="story-title">${title}</h2>
 
-<footer>
-  © 2026 अपनी कहानियाँ
-</footer>
+          <div class="meta">
+            ✍️ लेखक: ${author}
+            &nbsp; | &nbsp;
+            📚 श्रेणी: ${category}
+          </div>
+
+          <div class="story-text">
+            ${text.replace(/\n/g, "<br><br>")}
+          </div>
+        `;
+
+        document.title = title + " - अपनी कहानियाँ";
+
+      } catch (error) {
+
+        storyContent.innerHTML = `
+          <div class="not-found">
+            <h2>कहानी नहीं मिली</h2>
+            <p>कृपया होम पेज से कहानी दोबारा खोलें।</p>
+          </div>
+        `;
+
+      }
+
+    } else {
+
+      storyContent.innerHTML = `
+        <div class="not-found">
+          <h2>कहानी नहीं मिली</h2>
+          <p>कृपया होम पेज पर जाकर किसी कहानी पर क्लिक करें।</p>
+        </div>
+      `;
+
+    }
+
+
+    function escapeHtml(text) {
+
+      return String(text).replace(/[&<>"']/g, function(m) {
+
+        return {
+          "&": "&amp;",
+          "<": "&lt;",
+          ">": "&gt;",
+          '"': "&quot;",
+          "'": "&#039;"
+        }[m];
+
+      });
+
+    }
+  </script>
 
 </body>
 </html>
