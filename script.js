@@ -96,7 +96,8 @@ function readStory(index) {
     JSON.stringify(story)
   );
 
-  window.location.href = "/apni-kahaniyan/story.html";
+  window.location.href = "/
+  pni-kahaniyan/story.html";
 }
 
 
