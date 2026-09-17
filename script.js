@@ -5,54 +5,63 @@ const stories = [
     cat: "भावनात्मक",
     text: "एक छोटे से गाँव का बेटा पढ़ाई और नौकरी के लिए शहर चला गया। समय बीतता गया और वह अपनी माँ से दूर होता गया। एक दिन उसे माँ की पुरानी चिट्ठी मिली। उसमें सिर्फ इतना लिखा था—बेटा, जब भी समय मिले घर लौट आना। वह चिट्ठी पढ़कर उसकी आँखों में आँसू आ गए और उसने उसी दिन घर जाने का फैसला किया।"
   },
+
   {
     title: "एक छोटा सा सपना",
     author: "राहुल",
     cat: "प्रेरणादायक",
     text: "गाँव का एक लड़का रोज स्कूल के बाद पेड़ के नीचे बैठकर पढ़ता था। उसके पास साधन कम थे, लेकिन सपने बहुत बड़े थे। लोग उसका मजाक उड़ाते थे, लेकिन उसने मेहनत करना नहीं छोड़ा। कई साल बाद वही लड़का अपने गाँव का पहला बड़ा अधिकारी बना। उसने साबित कर दिया कि सपने साधनों से नहीं, मेहनत से पूरे होते हैं।"
   },
+
   {
     title: "पिता की पुरानी साइकिल",
     author: "अपनी कहानियाँ",
     cat: "परिवार",
     text: "एक पिता रोज अपनी पुरानी साइकिल से काम पर जाते थे। उनका बेटा बड़ा होकर शहर चला गया। बेटे ने एक दिन पिता के लिए नई महंगी गाड़ी भेजी। पिता मुस्कुराए और बोले—मेरे लिए सबसे कीमती चीज वह साइकिल है, जिस पर बैठकर मैंने तुम्हें स्कूल पहुँचाया था। बेटे को उस दिन पिता की मेहनत की असली कीमत समझ आई।"
   },
+
   {
     title: "बारिश की वह शाम",
     author: "सुमित",
     cat: "प्रेम",
     text: "बारिश की एक शाम दो पुराने दोस्त वर्षों बाद मिले। दोनों के पास कहने को बहुत कुछ था, लेकिन शब्द कम पड़ रहे थे। चाय की छोटी सी दुकान पर बैठकर उन्होंने पुरानी यादें ताजा कीं। उन्हें महसूस हुआ कि सच्चे रिश्तों में दूरी चाहे कितनी भी हो, अपनापन कभी खत्म नहीं होता।"
   },
+
   {
     title: "ईमानदारी का इनाम",
     author: "अपनी कहानियाँ",
     cat: "प्रेरणादायक",
     text: "एक गरीब युवक को रास्ते में पैसों से भरा बैग मिला। उसके घर में भी पैसों की जरूरत थी, फिर भी उसने बैग के मालिक को खोजकर वापस कर दिया। मालिक ने खुश होकर उसे इनाम देना चाहा। युवक ने कहा—मुझे इनाम नहीं चाहिए, बस यह खुशी काफी है कि मैंने सही काम किया।"
   },
+
   {
     title: "दादी की कहानी",
     author: "नेहा",
     cat: "परिवार",
     text: "हर रात दादी अपने पोते को एक कहानी सुनाती थीं। पोता बड़ा हुआ और शहर चला गया। कई साल बाद वह वापस आया तो दादी बूढ़ी हो चुकी थीं। उसने दादी का हाथ पकड़कर कहा—दादी, आपकी कहानियों ने ही मुझे अच्छा इंसान बनना सिखाया है। दादी की आँखों में खुशी के आँसू आ गए।"
   },
+
   {
     title: "हार मत मानो",
     author: "अपनी कहानियाँ",
     cat: "प्रेरणादायक",
     text: "एक खिलाड़ी लगातार तीन प्रतियोगिताओं में हार गया। उसके दोस्तों ने कहा कि अब उसे कोशिश छोड़ देनी चाहिए। लेकिन उसने अपनी गलतियों से सीखना जारी रखा। चौथी प्रतियोगिता में उसने जीत हासिल की। उसकी जीत ने सबको सिखाया कि असफलता अंत नहीं होती, बल्कि सफलता की तैयारी होती है।"
   },
+
   {
     title: "खाली जेब वाला आदमी",
     author: "अमित",
     cat: "भावनात्मक",
     text: "एक आदमी के पास उस दिन घर लौटने के लिए पैसे नहीं थे। रास्ते में उसे एक बुजुर्ग मिले जिन्हें दवा खरीदने के लिए पैसे चाहिए थे। आदमी ने अपनी आखिरी रकम उन्हें दे दी और पैदल घर चला गया। घर पहुँचने पर उसे पता चला कि उसके पड़ोसी ने उसकी मदद के लिए राशन भेजा है। अच्छाई अक्सर किसी न किसी रास्ते से वापस आती है।"
   },
+
   {
     title: "पेड़ की छाँव",
     author: "अपनी कहानियाँ",
     cat: "जीवन",
     text: "एक किसान ने अपने खेत के किनारे एक छोटा पौधा लगाया। लोग कहते थे कि इससे उसे क्या मिलेगा। वर्षों बाद वह पेड़ बड़ा हो गया और गर्मी में राहगीरों को छाँव देने लगा। किसान ने कहा—पेड़ लगाने का फायदा हमेशा हमें ही मिले, यह जरूरी नहीं। आने वाली पीढ़ियों के लिए कुछ छोड़ जाना भी बड़ी खुशी है।"
   },
+
   {
     title: "आखिरी मौका",
     author: "रोहित",
@@ -61,29 +70,55 @@ const stories = [
   }
 ];
 
+
+// ===============================
+// कहानियाँ स्क्रीन पर दिखाना
+// ===============================
+
 function render(list = stories) {
+
   const grid = document.getElementById("storyGrid");
 
   if (!grid) return;
 
-  grid.innerHTML = list.map((s) => `
-    <article class="card">
-      <div class="meta">${s.cat} · ${s.author}</div>
+  grid.innerHTML = list.map((story) => {
 
-      <h3>${s.title}</h3>
+    const index = stories.indexOf(story);
 
-      <p>${s.text.substring(0, 140)}...</p>
+    return `
+      <article class="card">
 
-      <button class="btn" onclick="readStory(${stories.indexOf(s)})">
-        पूरी कहानी पढ़ें →
-      </button>
-    </article>
-  `).join("");
+        <div class="meta">
+          ${escapeHtml(story.cat)} · ${escapeHtml(story.author)}
+        </div>
+
+        <h3>
+          ${escapeHtml(story.title)}
+        </h3>
+
+        <p>
+          ${escapeHtml(story.text.substring(0, 140))}...
+        </p>
+
+        <button
+          class="btn"
+          onclick="readStory(${index})">
+          पूरी कहानी पढ़ें →
+        </button>
+
+      </article>
+    `;
+
+  }).join("");
 }
 
 
-// पूरी कहानी खोलने वाला function
+// ===============================
+// पूरी कहानी खोलना
+// ===============================
+
 function readStory(index) {
+
   const story = stories[index];
 
   if (!story) {
@@ -96,57 +131,122 @@ function readStory(index) {
     JSON.stringify(story)
   );
 
-  window.location.href = "/apni-kahaniyan/story.html";
+  window.location.href =
+    "/apni-kahaniyan/story.html";
 }
 
+
+// ===============================
 // Search
+// ===============================
+
 function filterStories() {
-  const searchBox = document.getElementById("search");
+
+  const searchBox =
+    document.getElementById("search");
 
   if (!searchBox) return;
 
-  const q = searchBox.value.toLowerCase().trim();
+  const q =
+    searchBox.value.toLowerCase().trim();
 
-  render(
-    stories.filter(s =>
-      (s.title + " " + s.author + " " + s.cat + " " + s.text)
-        .toLowerCase()
-        .includes(q)
-    )
-  );
+  const filtered =
+    stories.filter((story) => {
+
+      return (
+        story.title +
+        " " +
+        story.author +
+        " " +
+        story.cat +
+        " " +
+        story.text
+      )
+      .toLowerCase()
+      .includes(q);
+
+    });
+
+  render(filtered);
 }
 
 
+// ===============================
 // अपनी कहानी जोड़ना
+// ===============================
+
 function addStory() {
-  const title = document.getElementById("title").value.trim();
-  const author = document.getElementById("author").value.trim();
-  const cat = document.getElementById("category").value;
-  const content = document.getElementById("content").value.trim();
+
+  const title =
+    document.getElementById("title").value.trim();
+
+  const author =
+    document.getElementById("author").value.trim();
+
+  const category =
+    document.getElementById("category").value;
+
+  const content =
+    document.getElementById("content").value.trim();
+
+  const message =
+    document.getElementById("msg");
+
 
   if (!title || !author || !content) {
-    document.getElementById("msg").textContent =
+
+    message.textContent =
       "कृपया सभी जानकारी भरें।";
+
     return;
   }
 
+
   stories.unshift({
+
     title: title,
+
     author: author,
-    cat: cat,
+
+    cat: category,
+
     text: content
+
   });
+
 
   render();
 
-  document.getElementById("msg").textContent =
+
+  message.textContent =
     "आपकी कहानी जोड़ दी गई है ❤️";
 
+
   document.getElementById("title").value = "";
+
   document.getElementById("author").value = "";
+
   document.getElementById("content").value = "";
 }
 
 
+// ===============================
+// HTML सुरक्षित रखने के लिए
+// ===============================
+
+function escapeHtml(text) {
+
+  const div =
+    document.createElement("div");
+
+  div.textContent = text;
+
+  return div.innerHTML;
+}
+
+
+// ===============================
 // वेबसाइट खुलते ही कहानियाँ दिखाएँ
+// ===============================
+
 render();
