@@ -63,34 +63,62 @@ const stories = [
 
 function render(list = stories) {
   const grid = document.getElementById("storyGrid");
+
   if (!grid) return;
 
-  grid.innerHTML = list.map((s, i) => `
+  grid.innerHTML = list.map((s) => `
     <article class="card">
       <div class="meta">${s.cat} · ${s.author}</div>
+
       <h3>${s.title}</h3>
+
       <p>${s.text.substring(0, 140)}...</p>
-      <button class="btn" onclick="readStory(${i})">
+
+      <button class="btn" onclick="readStory(${stories.indexOf(s)})">
         पूरी कहानी पढ़ें →
       </button>
     </article>
   `).join("");
-  function readStory(index) {
-  const story = stories[index];
-  localStorage.setItem("selectedStory", 
-  JSON.stringify(story));
-  window.location.href = "story.html";
-  }
-}function filterStories() {
-  const q = document.getElementById("search").value.toLowerCase();
-
-  render(stories.filter(s =>
-    (s.title + s.author + s.cat + s.text)
-      .toLowerCase()
-      .includes(q)
-  ));
 }
 
+
+// पूरी कहानी खोलने वाला function
+function readStory(index) {
+  const story = stories[index];
+
+  if (!story) {
+    alert("कहानी नहीं मिली।");
+    return;
+  }
+
+  localStorage.setItem(
+    "selectedStory",
+    JSON.stringify(story)
+  );
+
+  window.location.href = "story.html";
+}
+
+
+// Search
+function filterStories() {
+  const searchBox = document.getElementById("search");
+
+  if (!searchBox) return;
+
+  const q = searchBox.value.toLowerCase().trim();
+
+  render(
+    stories.filter(s =>
+      (s.title + " " + s.author + " " + s.cat + " " + s.text)
+        .toLowerCase()
+        .includes(q)
+    )
+  );
+}
+
+
+// अपनी कहानी जोड़ना
 function addStory() {
   const title = document.getElementById("title").value.trim();
   const author = document.getElementById("author").value.trim();
@@ -120,4 +148,6 @@ function addStory() {
   document.getElementById("content").value = "";
 }
 
+
+// वेबसाइट खुलते ही कहानियाँ दिखाएँ
 render();
