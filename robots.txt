@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://apnikahaniya.github.io/apni-kahaniyan/sitemap.xml
