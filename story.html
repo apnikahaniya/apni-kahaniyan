@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="hi">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,8 +33,8 @@
 
     .story-container {
       max-width: 850px;
-      margin: 30px auto;
-      padding: 25px;
+      margin: 25px auto;
+      padding: 15px;
     }
 
     .story-box {
@@ -45,28 +46,36 @@
 
     .story-title {
       margin-top: 0;
+      margin-bottom: 12px;
       color: #8b4513;
       font-size: 32px;
-      line-height: 1.4;
+      line-height: 1.35;
     }
 
     .meta {
       color: #777;
       font-size: 15px;
-      margin-bottom: 25px;
+      margin-bottom: 22px;
       padding-bottom: 15px;
       border-bottom: 1px solid #ddd;
     }
 
     .story-text {
       font-size: 19px;
-      line-height: 2;
-      white-space: normal;
+      line-height: 1.75;
+    }
+
+    .story-text p {
+      margin: 0 0 16px 0;
+    }
+
+    .story-text p:last-child {
+      margin-bottom: 0;
     }
 
     .back-button {
       display: inline-block;
-      margin-top: 25px;
+      margin-top: 20px;
       padding: 12px 20px;
       background: #8b4513;
       color: white;
@@ -87,13 +96,14 @@
       text-align: center;
       padding: 20px;
       color: #777;
-      margin-top: 30px;
+      margin-top: 25px;
     }
 
     @media (max-width: 600px) {
+
       .story-container {
-        margin: 15px auto;
-        padding: 12px;
+        margin: 10px auto;
+        padding: 10px;
       }
 
       .story-box {
@@ -101,12 +111,22 @@
       }
 
       .story-title {
-        font-size: 25px;
+        font-size: 26px;
+        line-height: 1.35;
       }
 
       .story-text {
-        font-size: 17px;
-        line-height: 1.9;
+        font-size: 18px;
+        line-height: 1.7;
+      }
+
+      .story-text p {
+        margin-bottom: 14px;
+      }
+
+      .back-button {
+        width: 100%;
+        text-align: center;
       }
     }
   </style>
@@ -121,9 +141,11 @@
   <main class="story-container">
 
     <div class="story-box" id="storyContent">
+
       <div class="not-found">
         <h2>कहानी लोड हो रही है...</h2>
       </div>
+
     </div>
 
     <a class="back-button" href="index.html">
@@ -138,6 +160,7 @@
 
 
   <script>
+
     const data = localStorage.getItem("selectedStory");
 
     const storyContent = document.getElementById("storyContent");
@@ -148,13 +171,52 @@
 
         const story = JSON.parse(data);
 
-        const title = escapeHtml(story.title || "बिना शीर्षक");
-        const author = escapeHtml(story.author || "अज्ञात लेखक");
-        const category = escapeHtml(story.cat || "सामान्य");
-        const text = escapeHtml(story.text || "कहानी उपलब्ध नहीं है।");
+        const title = escapeHtml(
+          story.title || "बिना शीर्षक"
+        );
+
+        const author = escapeHtml(
+          story.author || "अज्ञात लेखक"
+        );
+
+        const category = escapeHtml(
+          story.cat || "सामान्य"
+        );
+
+        const rawText = String(
+          story.text || "कहानी उपलब्ध नहीं है।"
+        );
+
+        /*
+          कहानी को छोटे-छोटे पैराग्राफ में दिखाएँ।
+          इससे ज्यादा खाली जगह नहीं आएगी।
+        */
+
+        const paragraphs = rawText
+          .split(/\n\s*\n/)
+          .map(function(paragraph) {
+
+            return paragraph.trim();
+
+          })
+          .filter(function(paragraph) {
+
+            return paragraph.length > 0;
+
+          })
+          .map(function(paragraph) {
+
+            return "<p>" + escapeHtml(paragraph) + "</p>";
+
+          })
+          .join("");
+
 
         storyContent.innerHTML = `
-          <h2 class="story-title">${title}</h2>
+
+          <h2 class="story-title">
+            ${title}
+          </h2>
 
           <div class="meta">
             ✍️ लेखक: ${author}
@@ -163,30 +225,49 @@
           </div>
 
           <div class="story-text">
-            ${text.replace(/\n/g, "<br><br>")}
+            ${paragraphs}
           </div>
+
         `;
 
         document.title = title + " - अपनी कहानियाँ";
 
-      } catch (error) {
+      }
+
+      catch (error) {
 
         storyContent.innerHTML = `
+
           <div class="not-found">
+
             <h2>कहानी नहीं मिली</h2>
-            <p>कृपया होम पेज से कहानी दोबारा खोलें।</p>
+
+            <p>
+              कृपया होम पेज से कहानी दोबारा खोलें।
+            </p>
+
           </div>
+
         `;
 
       }
 
-    } else {
+    }
+
+    else {
 
       storyContent.innerHTML = `
+
         <div class="not-found">
+
           <h2>कहानी नहीं मिली</h2>
-          <p>कृपया होम पेज पर जाकर किसी कहानी पर क्लिक करें।</p>
+
+          <p>
+            कृपया होम पेज पर जाकर किसी कहानी पर क्लिक करें।
+          </p>
+
         </div>
+
       `;
 
     }
@@ -194,20 +275,27 @@
 
     function escapeHtml(text) {
 
-      return String(text).replace(/[&<>"']/g, function(m) {
+      return String(text).replace(
+        /[&<>"']/g,
+        function(m) {
 
-        return {
-          "&": "&amp;",
-          "<": "&lt;",
-          ">": "&gt;",
-          '"': "&quot;",
-          "'": "&#039;"
-        }[m];
+          return {
 
-      });
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            '"': "&quot;",
+            "'": "&#039;"
+
+          }[m];
+
+        }
+      );
 
     }
+
   </script>
 
 </body>
+
 </html>
