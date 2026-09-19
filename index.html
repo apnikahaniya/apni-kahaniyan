@@ -1,27 +1,34 @@
 <!doctype html>
 <html lang="hi">
+
 <head>
-<meta charset="utf-8">
+  <meta charset="utf-8">
 
-<meta name="google-site-verification" content="beCgVSYL9lzX00nH3cPnv56jsyqXo14WowhXDq3VYvM" />
+  <meta name="google-site-verification"
+    content="beCgVSYL9lzX00nH3cPnv56jsyqXo14WowhXDq3VYvM">
 
-<meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>अपनी कहानियाँ | हिंदी कहानियाँ</title>
+  <title>अपनी कहानियाँ | हिंदी कहानियाँ</title>
 
-<meta name="description" content="अपनी कहानियाँ — प्रेम, परिवार, भावनात्मक, प्रेरणादायक और जिंदगी से जुड़ी दिल छू लेने वाली हिंदी कहानियाँ पढ़ें और अपनी कहानी साझा करें।">
+  <meta name="description"
+    content="अपनी कहानियाँ — प्रेम, परिवार, भावनात्मक, प्रेरणादायक और जिंदगी से जुड़ी दिल छू लेने वाली हिंदी कहानियाँ पढ़ें और अपनी कहानी साझा करें।">
 
-<meta name="keywords" content="हिंदी कहानी, हिंदी कहानियाँ, प्रेम कहानी, भावनात्मक कहानी, प्रेरणादायक कहानी, परिवार की कहानी">
+  <meta name="keywords"
+    content="हिंदी कहानी, हिंदी कहानियाँ, प्रेम कहानी, भावनात्मक कहानी, प्रेरणादायक कहानी, परिवार की कहानी">
 
-<meta name="author" content="अपनी कहानियाँ">
+  <meta name="author" content="अपनी कहानियाँ">
 
-<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-  <div class="logo">📖 अपनी कहानियाँ</div>
+
+  <div class="logo">
+    📖 अपनी कहानियाँ
+  </div>
 
   <nav>
     <a href="#home">होम</a>
@@ -31,142 +38,248 @@
     <a href="contact.html">Contact Us</a>
     <a href="privacy.html">Privacy Policy</a>
   </nav>
+
 </header>
+
 
 <main>
 
-<section id="home" class="hero">
-  <div>
-    <p class="tag">हर कहानी में एक एहसास</p>
+  <!-- HERO -->
 
-    <h1>अपनी कहानी, अपने शब्दों में।</h1>
+  <section id="home" class="hero">
 
-    <p>
-      प्रेम, परिवार, प्रेरणा और जिंदगी से जुड़ी दिल छू लेने वाली
-      कहानियाँ पढ़ें और अपनी कहानी दुनिया के साथ साझा करें।
-    </p>
+    <div>
 
-    <a class="btn" href="#stories">कहानियाँ पढ़ें</a>
-  </div>
-</section>
+      <p class="tag">
+        हर कहानी में एक एहसास
+      </p>
+
+      <h1>
+        अपनी कहानी, अपने शब्दों में।
+      </h1>
+
+      <p>
+        प्रेम, परिवार, प्रेरणा और जिंदगी से जुड़ी
+        दिल छू लेने वाली कहानियाँ पढ़ें और
+        अपनी कहानी दुनिया के साथ साझा करें।
+      </p>
+
+      <a class="btn" href="#stories">
+        कहानियाँ पढ़ें
+      </a>
+
+    </div>
+
+  </section>
 
 
-<section id="stories" class="section">
+  <!-- STORIES -->
 
-  <h2>🌸 लोकप्रिय कहानियाँ</h2>
+  <section id="stories" class="section">
 
-  <input
-    id="search"
-    class="search"
-    placeholder="कहानी खोजें..."
-    oninput="filterStories()"
-  >
+    <h2>
+      🌸 लोकप्रिय कहानियाँ
+    </h2>
 
-  <div class="categories">
 
-    <button class="category-btn active"
-      onclick="filterCategory('सभी')">
-      📚 सभी
+    <input
+      id="search"
+      class="search"
+      type="search"
+      placeholder="कहानी खोजें..."
+      oninput="filterStories()"
+    >
+
+
+    <div class="categories">
+
+      <button
+        type="button"
+        class="category-btn active"
+        onclick="filterCategory('सभी')">
+        📚 सभी
+      </button>
+
+
+      <button
+        type="button"
+        class="category-btn"
+        onclick="filterCategory('भावनात्मक')">
+        ❤️ भावनात्मक
+      </button>
+
+
+      <button
+        type="button"
+        class="category-btn"
+        onclick="filterCategory('परिवार')">
+        👨‍👩‍👧 परिवार
+      </button>
+
+
+      <button
+        type="button"
+        class="category-btn"
+        onclick="filterCategory('प्रेरणादायक')">
+        🌱 प्रेरणादायक
+      </button>
+
+
+      <button
+        type="button"
+        class="category-btn"
+        onclick="filterCategory('प्रेम')">
+        💕 प्रेम
+      </button>
+
+
+      <button
+        type="button"
+        class="category-btn"
+        onclick="filterCategory('जीवन')">
+        🌿 जीवन
+      </button>
+
+
+      <button
+        type="button"
+        class="category-btn"
+        onclick="filterCategory('दोस्ती')">
+        🤝 दोस्ती
+      </button>
+
+
+      <button
+        type="button"
+        class="category-btn"
+        onclick="filterCategory('आध्यात्मिक')">
+        🙏 आध्यात्मिक
+      </button>
+
+
+      <button
+        type="button"
+        class="category-btn"
+        onclick="filterCategory('मानवता')">
+        ❤️‍🩹 मानवता
+      </button>
+
+    </div>
+
+
+    <!-- यहाँ JavaScript कहानियाँ दिखाएगा -->
+
+    <div id="storyGrid" class="grid">
+    </div>
+
+  </section>
+
+
+  <!-- WRITE STORY -->
+
+  <section id="write" class="section write">
+
+    <h2>
+      ✍️ अपनी कहानी लिखें
+    </h2>
+
+
+    <input
+      id="title"
+      type="text"
+      placeholder="कहानी का नाम"
+    >
+
+
+    <input
+      id="author"
+      type="text"
+      placeholder="लेखक का नाम"
+    >
+
+
+    <select id="category">
+
+      <option value="प्रेरणादायक">
+        प्रेरणादायक
+      </option>
+
+      <option value="प्रेम">
+        प्रेम
+      </option>
+
+      <option value="परिवार">
+        परिवार
+      </option>
+
+      <option value="भावनात्मक">
+        भावनात्मक
+      </option>
+
+      <option value="जीवन">
+        जीवन
+      </option>
+
+      <option value="दोस्ती">
+        दोस्ती
+      </option>
+
+      <option value="आध्यात्मिक">
+        आध्यात्मिक
+      </option>
+
+      <option value="मानवता">
+        मानवता
+      </option>
+
+      <option value="डरावनी">
+        डरावनी
+      </option>
+
+    </select>
+
+
+    <textarea
+      id="content"
+      rows="8"
+      placeholder="अपनी कहानी यहाँ लिखें..."
+    ></textarea>
+
+
+    <button
+      type="button"
+      class="btn"
+      onclick="addStory()">
+
+      कहानी प्रकाशित करें
+
     </button>
 
-    <button class="category-btn"
-      onclick="filterCategory('भावनात्मक')">
-      ❤️ भावनात्मक
-    </button>
 
-    <button class="category-btn"
-      onclick="filterCategory('परिवार')">
-      👨‍👩‍👧 परिवार
-    </button>
+    <p id="msg"></p>
 
-    <button class="category-btn"
-      onclick="filterCategory('प्रेरणादायक')">
-      🌱 प्रेरणादायक
-    </button>
-
-    <button class="category-btn"
-      onclick="filterCategory('प्रेम')">
-      💕 प्रेम
-    </button>
-
-    <button class="category-btn"
-      onclick="filterCategory('जीवन')">
-      🌿 जीवन
-    </button>
-
-    <button class="category-btn"
-      onclick="filterCategory('दोस्ती')">
-      🤝 दोस्ती
-    </button>
-
-    <button class="category-btn"
-      onclick="filterCategory('आध्यात्मिक')">
-      🙏 आध्यात्मिक
-    </button>
-
-    <button class="category-btn"
-      onclick="filterCategory('मानवता')">
-      ❤️‍🩹 मानवता
-    </button>
-
-  </div>
-
-  <div id="storyGrid" class="grid"></div>
-
-</section>
-
-
-<section id="write" class="section write">
-
-  <h2>✍️ अपनी कहानी लिखें</h2>
-
-  <input
-    id="title"
-    placeholder="कहानी का नाम"
-  >
-
-  <input
-    id="author"
-    placeholder="लेखक का नाम"
-  >
-
-  <select id="category">
-    <option>प्रेरणादायक</option>
-    <option>प्रेम</option>
-    <option>परिवार</option>
-    <option>भावनात्मक</option>
-    <option>जीवन</option>
-    <option>दोस्ती</option>
-    <option>आध्यात्मिक</option>
-    <option>मानवता</option>
-    <option>डरावनी</option>
-  </select>
-
-  <textarea
-    id="content"
-    rows="8"
-    placeholder="अपनी कहानी यहाँ लिखें..."
-  ></textarea>
-
-  <button
-    class="btn"
-    onclick="addStory()">
-    कहानी प्रकाशित करें
-  </button>
-
-  <p id="msg"></p>
-
-</section>
+  </section>
 
 </main>
 
 
+<!-- FOOTER -->
+
 <footer>
-  © 2026 अपनी कहानियाँ · दिल से लिखें, दिल से पढ़ें ❤️
+
+  © 2026 अपनी कहानियाँ ·
+  दिल से लिखें, दिल से पढ़ें ❤️
+
 </footer>
 
 
-<script src="script.js"></script>
+<!-- JAVASCRIPT -->
+
+<script
+  src="script.js?v=7"
+  defer>
+</script>
 
 </body>
+
 </html>
