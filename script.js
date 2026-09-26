@@ -3949,7 +3949,8 @@ function readStory(index) {
     JSON.stringify(story)
   );
 
-  window.location.href = "story.html";
+  window.location.href = story.url || 
+"story.html";
 }
 
 
