@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>अपनी कहानी लिखें - अपनी कहानियाँ</title>
+
+  <meta name="description" content="अपनी कहानी अपने शब्दों में लिखें और अपनी कहानियाँ के साथ साझा करें।">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, "Noto Sans Devanagari", sans-serif;
+      background: #fffaf7;
+      color: #29201d;
+    }
+
+    header {
+      background: white;
+      padding: 15px 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 23px;
+      font-weight: bold;
+      color: #9b3d43;
+      margin-bottom: 12px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #9b3d43;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 35px auto;
+      padding: 20px;
+    }
+
+    .box {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      color: #9b3d43;
+      margin-top: 0;
+    }
+
+    p {
+      line-height: 1.8;
+    }
+
+    label {
+      display: block;
+      margin-top: 18px;
+      margin-bottom: 7px;
+      font-weight: bold;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 16px;
+      font-family: inherit;
+    }
+
+    textarea {
+      min-height: 250px;
+      resize: vertical;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      background: #9b3d43;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #7d3036;
+    }
+
+    .note {
+      margin-top: 20px;
+      padding: 15px;
+      background: #fff3e8;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">📖 अपनी कहानियाँ</div>
+
+  <nav>
+    <a href="index.html">होम</a>
+    <a href="index.html#stories">कहानियाँ</a>
+    <a href="write.html">अपनी कहानी लिखें</a>
+    <a href="about.html">हमारे बारे में</a>
+    <a href="contact.html">संपर्क करें</a>
+    <a href="privacy.html">प्राइवेसी पॉलिसी</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <div class="box">
+
+    <h1>✍️ अपनी कहानी लिखें</h1>
+
+    <p>
+      आपकी कहानी आपके शब्दों में। अपनी कहानी नीचे लिखें और
+      हमारे साथ साझा करें।
+    </p>
+
+    <form onsubmit="submitStory(event)">
+
+      <label>आपका नाम</label>
+      <input type="text" id="name" placeholder="अपना नाम लिखें" required>
+
+      <label>कहानी का शीर्षक</label>
+      <input type="text" id="title" placeholder="कहानी का नाम लिखें" required>
+
+      <label>श्रेणी</label>
+      <select id="category">
+        <option>भावनात्मक</option>
+        <option>प्रेम</option>
+        <option>परिवार</option>
+        <option>प्रेरणादायक</option>
+        <option>रहस्यमय</option>
+        <option>जीवन</option>
+        <option>दोस्ती</option>
+        <option>मानवता</option>
+        <option>पर्यावरण</option>
+        <option>अन्य</option>
+      </select>
+
+      <label>आपकी कहानी</label>
+      <textarea id="story" placeholder="अपनी पूरी कहानी यहाँ लिखें..." required></textarea>
+
+      <button type="submit">कहानी भेजें</button>
+
+    </form>
+
+    <div class="note">
+      💡 कहानी भेजने के बाद हमारी टीम उसे देखकर वेबसाइट पर प्रकाशित कर सकती है।
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+function submitStory(event) {
+  event.preventDefault();
+
+  alert(
+    "धन्यवाद! आपकी कहानी प्राप्त हो गई है। " +
+    "प्रकाशित करने से पहले कहानी की समीक्षा की जाएगी।"
+  );
+}
+</script>
+
+</body>
+</html>
