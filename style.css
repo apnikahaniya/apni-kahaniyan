@@ -1,5 +1,13 @@
+/* =================================================
+   अपनी कहानियाँ — Modern Responsive Design
+   ================================================= */
+
 * {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 html,
@@ -7,13 +15,14 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+  max-width: 100%;
   overflow-x: hidden;
 }
 
 body {
   font-family: Arial, "Noto Sans Devanagari", sans-serif;
   background: #fffaf7;
-  color: #29201d;
+  color: #302321;
   line-height: 1.7;
 }
 
@@ -21,18 +30,18 @@ body {
 
 header {
   width: 100%;
-  background: #fff;
-  padding: 16px 20px;
-  box-shadow: 0 2px 10px rgba(0,0,0,.08);
-
+  background: rgba(255,255,255,.97);
+  padding: 15px 5%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  border-bottom: 1px solid #f0dfda;
+  box-shadow: 0 3px 15px rgba(80,40,30,.07);
 }
 
 .logo {
-  color: #9b3d43;
+  color: #9d3945;
   font-size: 23px;
   font-weight: 800;
   white-space: nowrap;
@@ -47,24 +56,30 @@ nav {
 }
 
 nav a {
-  color: #5d3030;
+  color: #563b37;
   text-decoration: none;
-  font-size: 16px;
-  padding: 7px 9px;
-  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 8px 10px;
+  border-radius: 9px;
+  transition: .2s;
 }
 
 nav a:hover {
-  background: #f8e6e2;
+  background: #fae9e5;
+  color: #a83240;
 }
 
 /* ================= HERO ================= */
 
 .hero {
   width: 100%;
-  padding: 80px 20px;
+  padding: 85px 20px 90px;
   text-align: center;
-  background: linear-gradient(135deg, #fff0e8, #fde8ed);
+  background:
+    radial-gradient(circle at top left, #fff8f2, transparent 40%),
+    linear-gradient(135deg, #fff0ea, #fde5eb);
+  overflow: hidden;
 }
 
 .hero > div {
@@ -74,132 +89,133 @@ nav a:hover {
 }
 
 .hero .tag {
-  color: #9b3d43;
-  font-size: 21px;
+  display: inline-block;
+  color: #a23844;
+  background: #ffffffb8;
+  padding: 7px 16px;
+  border-radius: 30px;
+  font-size: 18px;
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 
 .hero h1 {
-  margin: 0 auto 25px;
+  margin: 0 auto 22px;
   font-size: clamp(40px, 7vw, 68px);
   line-height: 1.25;
+  color: #2b211f;
+  letter-spacing: -1px;
+  overflow-wrap: break-word;
 }
 
 .hero p {
   max-width: 760px;
-  margin: 0 auto 30px;
-  font-size: 20px;
-  line-height: 1.8;
+  margin: 0 auto 32px;
+  font-size: 19px;
+  line-height: 1.85;
 }
 
 .btn {
   display: inline-block;
-  background: #b33643;
+  background: linear-gradient(135deg, #c73548, #a92f40);
   color: #fff;
   text-decoration: none;
-  border: 0;
-  border-radius: 13px;
+  border: none;
+  border-radius: 14px;
   padding: 13px 25px;
-  font-size: 18px;
+  font-size: 17px;
+  font-weight: 700;
+  box-shadow: 0 7px 18px rgba(169,47,64,.22);
+  transition: transform .2s, box-shadow .2s;
 }
 
-/* ================= SECTIONS ================= */
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(169,47,64,.28);
+}
+
+/* ================= SECTION ================= */
 
 .section {
   width: 100%;
   max-width: 1150px;
-  margin: 0 auto;
+  margin: auto;
   padding: 55px 25px;
 }
 
-/* हमारी कहानियाँ */
-
 .section h2 {
   width: 100%;
-  margin: 0 0 30px;
-  padding: 0;
-
+  margin: 0 0 28px;
   text-align: center;
-
-  font-size: clamp(32px, 5vw, 46px);
+  font-size: clamp(31px, 5vw, 45px);
   line-height: 1.35;
-
-  overflow-wrap: break-word;
+  color: #302321;
 }
 
 /* ================= SEARCH ================= */
 
 .search {
   display: block;
-
   width: 100%;
   max-width: 650px;
-
   margin: 0 auto 22px;
-
-  padding: 14px 18px;
-
-  border: 1px solid #d7c8c3;
-  border-radius: 13px;
-
+  padding: 15px 20px;
+  border: 1px solid #e1d0ca;
+  border-radius: 15px;
   background: #fff;
-
-  font-size: 18px;
+  color: #302321;
+  font-size: 17px;
   outline: none;
+  box-shadow: 0 4px 15px rgba(80,40,30,.05);
 }
 
 .search:focus {
-  border-color: #b33643;
+  border-color: #bd3a49;
+  box-shadow: 0 0 0 3px rgba(189,58,73,.10);
 }
 
 /* ================= CATEGORIES ================= */
 
 .categories {
   width: 100%;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   flex-wrap: wrap;
-
-  gap: 10px;
-
+  gap: 9px;
   margin: 0 auto 35px;
 }
 
 .category-btn {
-  padding: 9px 16px;
-
-  border: 1px solid #dbc9c3;
-  border-radius: 11px;
-
-  background: #f7ebe7;
-  color: #3c2926;
-
-  font-size: 16px;
-
+  padding: 8px 15px;
+  border: 1px solid #dfcbc5;
+  border-radius: 30px;
+  background: #fff2ee;
+  color: #513a35;
+  font-size: 15px;
   cursor: pointer;
+  transition: .2s;
 }
 
-.category-btn:hover,
+.category-btn:hover {
+  background: #f7deda;
+  transform: translateY(-1px);
+}
+
 .category-btn.active {
-  background: #b33643;
+  background: linear-gradient(135deg,#c73548,#a92f40);
   color: #fff;
-  border-color: #b33643;
+  border-color: #b23344;
+  box-shadow: 0 4px 10px rgba(169,47,64,.18);
 }
 
 /* ================= STORY GRID ================= */
 
 .grid {
   width: 100%;
-
   display: grid;
-
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-
-  gap: 25px;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 24px;
 }
 
 /* ================= STORY CARD ================= */
@@ -207,45 +223,46 @@ nav a:hover {
 .story-card {
   width: 100%;
   min-width: 0;
-
   background: #fff;
-
   padding: 25px;
-
-  border-radius: 16px;
-
-  box-shadow: 0 4px 18px rgba(0,0,0,.07);
-
+  border: 1px solid #f0dfda;
+  border-radius: 18px;
+  box-shadow: 0 7px 25px rgba(70,35,25,.07);
   overflow: hidden;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.story-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(70,35,25,.11);
 }
 
 .story-card h2,
 .story-card h3 {
-  margin: 10px 0 14px;
-
+  margin: 10px 0 13px;
   font-size: 27px;
   line-height: 1.4;
-
+  color: #302321;
   overflow-wrap: break-word;
 }
 
 .story-card p {
   font-size: 17px;
   line-height: 1.8;
-
+  color: #51413d;
   overflow-wrap: break-word;
 }
 
 .category {
-  color: #9b3d43;
+  color: #a23844;
   font-weight: 700;
 }
 
 .author {
-  color: #665653;
+  color: #786560;
 }
 
-/* ================= WRITE SECTION ================= */
+/* ================= WRITE ================= */
 
 .write {
   max-width: 850px;
@@ -259,19 +276,20 @@ nav a:hover {
 .write select,
 .write textarea {
   display: block;
-
   width: 100%;
-
   margin-bottom: 15px;
-
   padding: 13px 15px;
-
-  border: 1px solid #ccc;
-  border-radius: 9px;
-
+  border: 1px solid #ddccc6;
+  border-radius: 11px;
   background: #fff;
-
   font-size: 16px;
+  outline: none;
+}
+
+.write input:focus,
+.write select:focus,
+.write textarea:focus {
+  border-color: #b53646;
 }
 
 .write textarea {
@@ -284,35 +302,28 @@ nav a:hover {
 .story-page {
   width: 100%;
   max-width: 1000px;
-
-  margin: 0 auto;
-
+  margin: auto;
   padding: 40px 20px;
-
   overflow-x: hidden;
 }
 
 .story-page .story-card {
   width: 100%;
   max-width: 900px;
-
   margin: auto;
-
   padding: 30px;
-
   background: #fff;
-
-  border-radius: 16px;
-
+  border-radius: 18px;
+  border: 1px solid #f0dfda;
+  box-shadow: 0 7px 25px rgba(70,35,25,.07);
   overflow: hidden;
 }
 
 .story-page h1 {
   margin: 20px 0;
-
-  font-size: clamp(32px, 6vw, 54px);
+  font-size: clamp(32px,6vw,54px);
   line-height: 1.35;
-
+  color: #302321;
   overflow-wrap: break-word;
 }
 
@@ -330,24 +341,20 @@ nav a:hover {
 
 footer {
   width: 100%;
-
-  padding: 30px 15px;
-
+  margin-top: 30px;
+  padding: 32px 15px;
   text-align: center;
-
-  background: #2d2422;
+  background: #302321;
   color: #fff;
 }
 
-/* =================================================
-   MOBILE
-   ================================================= */
+/* ================= MOBILE ================= */
 
 @media (max-width: 700px) {
 
   header {
     display: block;
-    padding: 16px 12px 18px;
+    padding: 16px 10px 18px;
     text-align: center;
   }
 
@@ -367,14 +374,12 @@ footer {
     padding: 6px 7px;
   }
 
-  /* HERO */
-
   .hero {
-    padding: 55px 18px 65px;
+    padding: 55px 16px 65px;
   }
 
   .hero .tag {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .hero h1 {
@@ -387,74 +392,56 @@ footer {
     line-height: 1.75;
   }
 
-  /* SECTION */
-
   .section {
-    width: 100%;
-    padding: 40px 15px;
+    padding: 42px 14px;
   }
 
   .section h2 {
-    width: 100%;
-    margin: 0 0 25px;
-    padding: 0 5px;
-
-    text-align: center;
-
     font-size: 32px;
-    line-height: 1.4;
+    margin-bottom: 25px;
   }
-
-  /* SEARCH */
 
   .search {
-    width: 100%;
-    margin-bottom: 20px;
     font-size: 17px;
+    padding: 14px 16px;
   }
 
-  /* CATEGORY */
-
   .categories {
-    width: 100%;
-    justify-content: center;
     gap: 8px;
     margin-bottom: 30px;
   }
 
   .category-btn {
-    font-size: 15px;
+    font-size: 14px;
     padding: 8px 12px;
   }
 
-  /* STORIES */
-
   .grid {
-    width: 100%;
     grid-template-columns: 1fr;
     gap: 18px;
   }
 
   .story-card {
-    width: 100%;
     padding: 20px 16px;
+    border-radius: 16px;
   }
 
   .story-card h2,
   .story-card h3 {
-    font-size: 26px;
+    font-size: 25px;
   }
 
-  /* STORY PAGE */
+  .story-card p {
+    font-size: 17px;
+  }
 
   .story-page {
-    width: 100%;
-    padding: 25px 12px;
+    padding: 25px 11px;
   }
 
   .story-page .story-card {
-    width: 100%;
     padding: 20px 15px;
+    border-radius: 15px;
   }
 
   .story-page h1 {
@@ -468,9 +455,7 @@ footer {
   }
 }
 
-/* =================================================
-   VERY SMALL MOBILE
-   ================================================= */
+/* ================= SMALL PHONES ================= */
 
 @media (max-width: 400px) {
 
@@ -501,11 +486,7 @@ footer {
   }
 
   .category-btn {
-    font-size: 14px;
+    font-size: 13px;
     padding: 7px 10px;
-  }
-
-  .story-card {
-    padding: 17px 13px;
   }
 }
