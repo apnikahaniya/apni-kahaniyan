@@ -1,63 +1,551 @@
-/* Mobile Story Fix */
-html,
-body {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
+/* ================================
+   अपनी कहानियाँ - Complete CSS
+   ================================ */
 
 * {
   box-sizing: border-box;
 }
 
-.story-page {
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
   width: 100%;
   max-width: 100%;
-  margin: 0 auto;
-  padding: 20px 15px;
   overflow-x: hidden;
 }
 
+body {
+  font-family: Arial, "Noto Sans Devanagari", sans-serif;
+  background: #fffaf7;
+  color: #29201d;
+  line-height: 1.7;
+}
+
+/* ================================
+   HEADER
+   ================================ */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  width: 100%;
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 14px 5%;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.logo {
+  font-size: 23px;
+  font-weight: 800;
+  color: #9b3d43;
+  white-space: nowrap;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+nav a {
+  color: #5d3030;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 7px 9px;
+  border-radius: 8px;
+}
+
+nav a:hover {
+  background: #f8e6e2;
+  color: #9b3d43;
+}
+
+/* ================================
+   HERO
+   ================================ */
+
+.hero {
+  width: 100%;
+  padding: 70px 20px;
+  text-align: center;
+
+  background: linear-gradient(
+    135deg,
+    #fff0e8,
+    #fde8ed
+  );
+}
+
+.hero .tag {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: #9b3d43;
+  font-weight: 700;
+}
+
+.hero h1 {
+  margin: 0 auto 20px;
+  max-width: 900px;
+
+  font-size: clamp(38px, 7vw, 68px);
+  line-height: 1.25;
+  color: #2b211f;
+}
+
+.hero p {
+  max-width: 760px;
+  margin: 0 auto 25px;
+
+  font-size: 19px;
+  line-height: 1.8;
+}
+
+/* ================================
+   BUTTONS
+   ================================ */
+
+button,
+.btn {
+  display: inline-block;
+
+  border: none;
+  border-radius: 10px;
+
+  padding: 10px 18px;
+
+  background: #9b3d43;
+  color: white;
+
+  font-size: 16px;
+  cursor: pointer;
+
+  text-decoration: none;
+}
+
+button:hover,
+.btn:hover {
+  background: #7d3036;
+}
+
+/* ================================
+   MAIN
+   ================================ */
+
+main {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* ================================
+   STORIES SECTION
+   ================================ */
+
+#stories {
+  width: 100%;
+}
+
+#stories h2 {
+  margin-bottom: 25px;
+
+  font-size: clamp(28px, 5vw, 42px);
+  line-height: 1.3;
+}
+
+/* ================================
+   SEARCH
+   ================================ */
+
+#searchInput,
+.search-box input,
+input[type="search"] {
+  width: 100%;
+  max-width: 500px;
+
+  padding: 12px 15px;
+
+  border: 1px solid #cfcfcf;
+  border-radius: 10px;
+
+  background: white;
+
+  font-size: 17px;
+  outline: none;
+}
+
+#searchInput:focus,
+.search-box input:focus {
+  border-color: #9b3d43;
+}
+
+/* ================================
+   CATEGORY BUTTONS
+   ================================ */
+
+.categories,
+.category-buttons,
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin: 15px 0 30px;
+}
+
+.categories button,
+.category-buttons button,
+.filters button {
+  background: #f4e8e4;
+  color: #392522;
+
+  border: 1px solid #d8c5bf;
+
+  padding: 8px 13px;
+  border-radius: 8px;
+
+  font-size: 15px;
+}
+
+.categories button:hover,
+.category-buttons button:hover,
+.filters button:hover {
+  background: #9b3d43;
+  color: white;
+}
+
+/* ================================
+   STORY LIST
+   ================================ */
+
+#storyList,
+.story-list {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+/* ================================
+   STORY CARD
+   ================================ */
+
 .story-card {
   width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-  overflow-wrap: anywhere;
-  word-break: normal;
+  max-width: 100%;
+  min-width: 0;
+
+  background: white;
+
+  padding: 24px;
+
+  border-radius: 15px;
+
+  box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+
+  overflow: hidden;
 }
 
-.story-card h1 {
-  width: 100%;
-  max-width: 100%;
-  font-size: clamp(30px, 7vw, 52px);
-  line-height: 1.3;
-  overflow-wrap: anywhere;
-}
+.story-card h2,
+.story-card h3 {
+  margin-top: 8px;
+  margin-bottom: 12px;
 
-.story-card article {
-  width: 100%;
-  max-width: 100%;
-  overflow-wrap: anywhere;
-  word-break: normal;
+  color: #2b211f;
+
+  line-height: 1.4;
+
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .story-card p {
-  max-width: 100%;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
-@media (max-width: 600px) {
+.category {
+  color: #9b3d43;
+  font-weight: 700;
+
+  margin-bottom: 12px;
+}
+
+.author {
+  color: #665653;
+  font-size: 16px;
+}
+
+/* ================================
+   STORY PAGE
+   ================================ */
+
+.story-page {
+  width: 100%;
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  padding: 35px 20px;
+
+  overflow-x: hidden;
+}
+
+.story-page .story-card {
+  width: 100%;
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  padding: 30px;
+
+  background: #ffffff;
+
+  border-radius: 16px;
+
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+
+  overflow: hidden;
+}
+
+.story-page h1 {
+  width: 100%;
+  max-width: 100%;
+
+  margin: 20px 0;
+
+  font-size: clamp(32px, 6vw, 54px);
+
+  line-height: 1.35;
+
+  color: #29201d;
+
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: normal;
+}
+
+.story-page article {
+  width: 100%;
+  max-width: 100%;
+
+  font-size: 19px;
+  line-height: 2;
+
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.story-page article p {
+  width: 100%;
+  max-width: 100%;
+
+  margin: 0 0 25px;
+
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* ================================
+   WRITE / ABOUT / CONTACT / PRIVACY
+   ================================ */
+
+.page-card,
+.form-card,
+.content-card {
+  width: 100%;
+  max-width: 850px;
+
+  margin: 0 auto;
+
+  background: white;
+
+  padding: 30px;
+
+  border-radius: 15px;
+
+  box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+}
+
+.page-card h1,
+.form-card h1,
+.content-card h1 {
+  font-size: clamp(30px, 6vw, 48px);
+  line-height: 1.35;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+
+  padding: 12px 14px;
+
+  border: 1px solid #ccc;
+  border-radius: 8px;
+
+  font-size: 16px;
+
+  background: white;
+}
+
+textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+
+/* ================================
+   FOOTER
+   ================================ */
+
+footer {
+  margin-top: 50px;
+
+  padding: 30px 20px;
+
+  text-align: center;
+
+  background: #2d2422;
+  color: white;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+/* ================================
+   MOBILE
+   ================================ */
+
+@media (max-width: 700px) {
+
+  header {
+    position: relative;
+
+    display: block;
+
+    padding: 14px 12px;
+  }
+
+  .logo {
+    text-align: center;
+    margin-bottom: 10px;
+
+    font-size: 22px;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 3px;
+  }
+
+  nav a {
+    font-size: 15px;
+    padding: 5px 6px;
+  }
+
+  .hero {
+    padding: 45px 15px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
+
+  main {
+    padding: 25px 12px;
+  }
+
+  #storyList,
+  .story-list {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .story-card {
+    padding: 18px;
+  }
+
   .story-page {
-    padding: 15px 12px;
+    padding: 20px 10px;
   }
 
-  .story-card h1 {
-    font-size: 32px;
-    line-height: 1.35;
+  .story-page .story-card {
+    padding: 18px 12px;
+
+    border-radius: 10px;
   }
 
-  .story-card article {
+  .story-page h1 {
+    font-size: 30px;
+    line-height: 1.4;
+
+    margin: 15px 0;
+  }
+
+  .story-page article {
     font-size: 18px;
-    line-height: 1.8;
+    line-height: 1.85;
+  }
+
+  .story-page article p {
+    margin-bottom: 22px;
+  }
+
+  .page-card,
+  .form-card,
+  .content-card {
+    padding: 20px 15px;
+  }
+}
+
+/* ================================
+   SMALL MOBILE
+   ================================ */
+
+@media (max-width: 400px) {
+
+  .logo {
+    font-size: 20px;
+  }
+
+  nav a {
+    font-size: 14px;
+    padding: 4px 5px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .story-page h1 {
+    font-size: 28px;
+  }
+
+  .story-page article {
+    font-size: 17px;
   }
 }
