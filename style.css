@@ -1,93 +1,114 @@
-/* =========================================================
-   अपनी कहानियाँ — Clean & Professional Responsive Design
-   ========================================================= */
+/* =====================================================
+   अपनी कहानियाँ — Clean Responsive Design
+   Mobile + Computer
+   ===================================================== */
 
 * {
   box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
   width: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
 body {
+  width: 100%;
   margin: 0;
   padding: 0;
-  width: 100%;
-  overflow-x: hidden;
 
   font-family: Arial, "Noto Sans Devanagari", sans-serif;
-  color: #29201d;
+
   background: #fffaf8;
+  color: #29201d;
+
   line-height: 1.7;
+
+  overflow-x: hidden;
 }
 
-/* =========================================================
+/* =====================================================
    HEADER
-   ========================================================= */
+   ===================================================== */
 
 header {
   width: 100%;
-  background: #ffffff;
-  border-bottom: 1px solid #eee1dc;
-  box-shadow: 0 2px 12px rgba(50, 30, 25, 0.06);
-
-  padding: 13px 5%;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+
+  gap: 15px;
+
+  padding: 11px 5%;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #eee2de;
+
+  box-shadow: 0 2px 10px rgba(50, 30, 25, 0.06);
 }
 
 .logo {
-  color: #9d3945;
-  font-size: 23px;
+  color: #9b3945;
+
+  font-size: 22px;
   font-weight: 800;
+
   white-space: nowrap;
 }
 
 nav {
   display: flex;
+
   align-items: center;
   justify-content: flex-end;
+
   flex-wrap: wrap;
-  gap: 3px;
+
+  gap: 2px;
 }
 
 nav a {
-  color: #503b37;
+  display: inline-block;
+
+  padding: 6px 8px;
+
+  color: #523c37;
+
   text-decoration: none;
 
   font-size: 15px;
   font-weight: 600;
 
-  padding: 7px 9px;
   border-radius: 8px;
 
   transition: 0.2s;
 }
 
 nav a:hover {
-  background: #f9ebe7;
-  color: #9d3945;
+  background: #faebe7;
+  color: #9b3945;
 }
 
-/* =========================================================
+/* =====================================================
    HERO
-   ========================================================= */
+   ===================================================== */
 
 .hero {
   width: 100%;
-  min-height: 500px;
 
-  padding: 70px 20px;
+  min-height: 440px;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
+
+  padding: 55px 20px 60px;
 
   text-align: center;
 
@@ -107,31 +128,35 @@ nav a:hover {
 .hero > div {
   width: 100%;
   max-width: 850px;
-  margin: auto;
+
+  margin: 0 auto;
 }
 
 .hero .tag {
   display: inline-block;
 
-  margin-bottom: 18px;
-  padding: 6px 16px;
+  margin-bottom: 15px;
+
+  padding: 5px 15px;
 
   border-radius: 30px;
 
-  background: rgba(255,255,255,.8);
-  color: #9d3945;
+  background: rgba(255,255,255,.85);
+
+  color: #9b3945;
 
   font-size: 18px;
   font-weight: 700;
 }
 
 .hero h1 {
-  margin: 0 auto 22px;
+  margin: 0 auto 20px;
 
   color: #29201d;
 
-  font-size: clamp(42px, 6vw, 68px);
-  line-height: 1.2;
+  font-size: clamp(40px, 6vw, 66px);
+
+  line-height: 1.25;
 
   letter-spacing: -1px;
 
@@ -142,21 +167,26 @@ nav a:hover {
   width: 100%;
   max-width: 720px;
 
-  margin: 0 auto 30px;
+  margin: 0 auto 27px;
 
   font-size: 19px;
+
   line-height: 1.8;
+
+  overflow-wrap: break-word;
 }
 
 .btn {
   display: inline-block;
 
-  padding: 12px 25px;
+  padding: 12px 24px;
 
   border: 0;
+
   border-radius: 12px;
 
   background: #b93447;
+
   color: #ffffff;
 
   text-decoration: none;
@@ -164,21 +194,22 @@ nav a:hover {
   font-size: 17px;
   font-weight: 700;
 
-  box-shadow: 0 6px 16px rgba(185,52,71,.20);
-
   cursor: pointer;
+
+  box-shadow: 0 5px 15px rgba(185,52,71,.18);
 
   transition: .2s;
 }
 
 .btn:hover {
   background: #9f2d3e;
+
   transform: translateY(-2px);
 }
 
-/* =========================================================
-   MAIN SECTIONS
-   ========================================================= */
+/* =====================================================
+   SECTION
+   ===================================================== */
 
 .section {
   width: 100%;
@@ -186,27 +217,30 @@ nav a:hover {
 
   margin: 0 auto;
 
-  padding: 55px 25px;
+  padding: 45px 25px;
 }
 
 .section h2 {
   width: 100%;
 
-  margin: 0 0 28px;
+  margin: 0 0 25px;
+
+  padding: 0;
 
   text-align: center;
 
-  color: #2d2320;
+  font-size: clamp(31px, 5vw, 44px);
 
-  font-size: clamp(32px, 5vw, 44px);
   line-height: 1.3;
+
+  color: #2d2320;
 
   overflow-wrap: break-word;
 }
 
-/* =========================================================
+/* =====================================================
    SEARCH
-   ========================================================= */
+   ===================================================== */
 
 .search {
   display: block;
@@ -214,11 +248,12 @@ nav a:hover {
   width: 100%;
   max-width: 680px;
 
-  margin: 0 auto 22px;
+  margin: 0 auto 20px;
 
-  padding: 14px 18px;
+  padding: 13px 17px;
 
-  border: 1px solid #ddd0cb;
+  border: 1px solid #ddd0ca;
+
   border-radius: 12px;
 
   background: #ffffff;
@@ -236,34 +271,37 @@ nav a:hover {
   border-color: #b93447;
 
   box-shadow:
-    0 0 0 3px rgba(185,52,71,.09);
+    0 0 0 3px rgba(185,52,71,.08);
 }
 
-/* =========================================================
+/* =====================================================
    CATEGORY BUTTONS
-   ========================================================= */
+   ===================================================== */
 
 .categories {
   width: 100%;
 
-  margin: 0 auto 38px;
-
   display: flex;
-  justify-content: center;
+
   align-items: center;
+  justify-content: center;
 
   flex-wrap: wrap;
 
   gap: 8px;
+
+  margin: 0 auto 30px;
 }
 
 .category-btn {
   padding: 8px 14px;
 
   border: 1px solid #dfcdc7;
+
   border-radius: 25px;
 
-  background: #fff4f0;
+  background: #fff3ef;
+
   color: #4b3833;
 
   font-size: 15px;
@@ -274,11 +312,12 @@ nav a:hover {
 }
 
 .category-btn:hover {
-  background: #f9e3df;
+  background: #f8e2de;
 }
 
 .category-btn.active {
   background: #b93447;
+
   border-color: #b93447;
 
   color: #ffffff;
@@ -286,9 +325,9 @@ nav a:hover {
   box-shadow: 0 4px 10px rgba(185,52,71,.16);
 }
 
-/* =========================================================
+/* =====================================================
    STORY GRID
-   ========================================================= */
+   ===================================================== */
 
 .grid {
   width: 100%;
@@ -298,60 +337,61 @@ nav a:hover {
   grid-template-columns:
     repeat(3, minmax(0, 1fr));
 
-  gap: 22px;
+  gap: 20px;
 }
 
-/* =========================================================
+/* =====================================================
    STORY CARD
-   ========================================================= */
+   ===================================================== */
 
 .story-card {
   width: 100%;
+
   min-width: 0;
 
-  padding: 23px;
+  padding: 22px;
 
   background: #ffffff;
 
-  border: 1px solid #eee0dc;
+  border: 1px solid #eee0db;
 
   border-radius: 15px;
 
   box-shadow:
-    0 4px 18px rgba(50,30,25,.06);
+    0 4px 16px rgba(50,30,25,.06);
 
   overflow: hidden;
 
-  transition:
-    transform .2s,
-    box-shadow .2s;
+  transition: .2s;
 }
 
 .story-card:hover {
   transform: translateY(-3px);
 
   box-shadow:
-    0 9px 25px rgba(50,30,25,.10);
+    0 9px 24px rgba(50,30,25,.10);
 }
 
 .story-card h2,
 .story-card h3 {
-  margin: 9px 0 12px;
+  margin: 8px 0 12px;
 
   color: #29201d;
 
   font-size: 25px;
+
   line-height: 1.4;
 
   overflow-wrap: break-word;
 }
 
 .story-card p {
-  margin: 0 0 15px;
+  margin: 0 0 14px;
 
   color: #554540;
 
   font-size: 16px;
+
   line-height: 1.8;
 
   overflow-wrap: break-word;
@@ -359,6 +399,7 @@ nav a:hover {
 
 .category {
   color: #a23845;
+
   font-weight: 700;
 }
 
@@ -366,9 +407,9 @@ nav a:hover {
   color: #76625d;
 }
 
-/* =========================================================
+/* =====================================================
    WRITE STORY
-   ========================================================= */
+   ===================================================== */
 
 .write {
   max-width: 850px;
@@ -384,9 +425,10 @@ nav a:hover {
 
   margin-bottom: 14px;
 
-  padding: 13px 15px;
+  padding: 12px 14px;
 
-  border: 1px solid #ddd0cb;
+  border: 1px solid #ddd0ca;
+
   border-radius: 10px;
 
   background: #ffffff;
@@ -404,12 +446,13 @@ nav a:hover {
 
 .write textarea {
   min-height: 180px;
+
   resize: vertical;
 }
 
-/* =========================================================
+/* =====================================================
    STORY READING PAGE
-   ========================================================= */
+   ===================================================== */
 
 .story-page {
   width: 100%;
@@ -417,7 +460,7 @@ nav a:hover {
 
   margin: 0 auto;
 
-  padding: 40px 20px;
+  padding: 35px 20px;
 
   overflow-x: hidden;
 }
@@ -428,11 +471,12 @@ nav a:hover {
 
   margin: 0 auto;
 
-  padding: 32px;
+  padding: 30px;
 
   background: #ffffff;
 
-  border: 1px solid #eee0dc;
+  border: 1px solid #eee0db;
+
   border-radius: 16px;
 
   box-shadow:
@@ -444,11 +488,10 @@ nav a:hover {
 .story-page h1 {
   width: 100%;
 
-  margin: 15px 0 25px;
-
-  color: #29201d;
+  margin: 15px 0 22px;
 
   font-size: clamp(32px, 5vw, 54px);
+
   line-height: 1.3;
 
   overflow-wrap: break-word;
@@ -458,55 +501,53 @@ nav a:hover {
   width: 100%;
 
   font-size: 19px;
+
   line-height: 2;
 }
 
 .story-page article p {
-  margin: 0 0 24px;
+  margin: 0 0 23px;
 
   overflow-wrap: break-word;
 }
 
-/* =========================================================
+/* =====================================================
    FOOTER
-   ========================================================= */
+   ===================================================== */
 
 footer {
   width: 100%;
 
-  margin-top: 25px;
+  margin-top: 20px;
 
-  padding: 30px 15px;
+  padding: 28px 15px;
 
   text-align: center;
 
   background: #302522;
+
   color: #ffffff;
 }
 
-/* =========================================================
+/* =====================================================
    TABLET
-   ========================================================= */
+   ===================================================== */
 
 @media (max-width: 900px) {
 
   header {
-    padding: 13px 20px;
+    padding: 10px 20px;
   }
 
   .grid {
     grid-template-columns:
       repeat(2, minmax(0, 1fr));
   }
-
-  .hero {
-    min-height: 450px;
-  }
 }
 
-/* =========================================================
+/* =====================================================
    MOBILE
-   ========================================================= */
+   ===================================================== */
 
 @media (max-width: 650px) {
 
@@ -515,7 +556,9 @@ footer {
   header {
     display: block;
 
-    padding: 14px 10px 15px;
+    width: 100%;
+
+    padding: 8px 7px 9px;
 
     text-align: center;
   }
@@ -523,18 +566,204 @@ footer {
   .logo {
     display: block;
 
-    margin-bottom: 10px;
+    margin-bottom: 4px;
 
-    font-size: 21px;
+    font-size: 20px;
+
+    line-height: 1.3;
   }
 
   nav {
     width: 100%;
 
+    display: flex;
+
     justify-content: center;
 
-    gap: 2px;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 1px;
   }
 
   nav a {
-    font-size: 13
+    padding: 4px 5px;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+  }
+
+  /* HERO */
+
+  .hero {
+    min-height: auto;
+
+    padding: 40px 15px 48px;
+  }
+
+  .hero .tag {
+    margin-bottom: 12px;
+
+    padding: 5px 12px;
+
+    font-size: 16px;
+  }
+
+  .hero h1 {
+    margin-bottom: 17px;
+
+    font-size: 36px;
+
+    line-height: 1.3;
+
+    letter-spacing: 0;
+  }
+
+  .hero p {
+    margin-bottom: 23px;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+  }
+
+  .btn {
+    padding: 11px 21px;
+
+    font-size: 16px;
+  }
+
+  /* SECTION */
+
+  .section {
+    padding: 38px 14px;
+  }
+
+  .section h2 {
+    margin-bottom: 22px;
+
+    font-size: 31px;
+  }
+
+  /* SEARCH */
+
+  .search {
+    margin-bottom: 18px;
+
+    padding: 12px 15px;
+
+    font-size: 16px;
+  }
+
+  /* CATEGORIES */
+
+  .categories {
+    gap: 7px;
+
+    margin-bottom: 28px;
+  }
+
+  .category-btn {
+    padding: 7px 11px;
+
+    font-size: 14px;
+  }
+
+  /* GRID */
+
+  .grid {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+
+  /* CARDS */
+
+  .story-card {
+    padding: 19px 15px;
+
+    border-radius: 13px;
+  }
+
+  .story-card h2,
+  .story-card h3 {
+    font-size: 24px;
+  }
+
+  .story-card p {
+    font-size: 16px;
+
+    line-height: 1.75;
+  }
+
+  /* STORY PAGE */
+
+  .story-page {
+    padding: 23px 10px;
+  }
+
+  .story-page .story-card {
+    padding: 20px 14px;
+  }
+
+  .story-page h1 {
+    font-size: 29px;
+
+    line-height: 1.4;
+  }
+
+  .story-page article {
+    font-size: 18px;
+
+    line-height: 1.85;
+  }
+}
+
+/* =====================================================
+   SMALL PHONE
+   ===================================================== */
+
+@media (max-width: 400px) {
+
+  .logo {
+    font-size: 19px;
+  }
+
+  nav a {
+    font-size: 12px;
+
+    padding: 4px;
+  }
+
+  .hero {
+    padding-top: 35px;
+
+    padding-bottom: 43px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .section {
+    padding-left: 11px;
+
+    padding-right: 11px;
+  }
+
+  .section h2 {
+    font-size: 28px;
+  }
+
+  .category-btn {
+    font-size: 13px;
+
+    padding: 7px 9px;
+  }
+}
